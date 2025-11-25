@@ -518,8 +518,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1060,
-        "y": 380,
+        "x": 1080,
+        "y": 500,
         "wires": [
             [
                 "2625388e58621017"
@@ -540,6 +540,22 @@
         "statusType": "auto",
         "x": 1260,
         "y": 400,
+        "wires": []
+    },
+    {
+        "id": "6128c5c80ba21391",
+        "type": "debug",
+        "z": "be50ff852940cf1a",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1300,
+        "y": 540,
         "wires": []
     }
 ]
