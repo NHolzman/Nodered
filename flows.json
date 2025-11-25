@@ -37,5 +37,464 @@
         "willMsg": {},
         "userProps": "",
         "sessionExpiry": ""
+    },
+    {
+        "id": "eb7377c397ef064e",
+        "type": "mqtt in",
+        "z": "8f708038682bad2f",
+        "name": "",
+        "topic": "2474042/feeds/led",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1116d2b2529ec5f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 470,
+        "y": 160,
+        "wires": [
+            [
+                "b5d846f5283d0f49"
+            ]
+        ]
+    },
+    {
+        "id": "b5d846f5283d0f49",
+        "type": "debug",
+        "z": "8f708038682bad2f",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "b0243255499b7fbe",
+        "type": "mqtt in",
+        "z": "8f708038682bad2f",
+        "name": "",
+        "topic": "2474042/feeds/led",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1116d2b2529ec5f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 470,
+        "y": 460,
+        "wires": [
+            [
+                "c8d0922261efaa45"
+            ]
+        ]
+    },
+    {
+        "id": "b5ca5d37abdacea2",
+        "type": "mqtt in",
+        "z": "8f708038682bad2f",
+        "name": "",
+        "topic": "2474042/feeds/throttle",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1116d2b2529ec5f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 480,
+        "y": 100,
+        "wires": [
+            [
+                "b5d846f5283d0f49"
+            ]
+        ]
+    },
+    {
+        "id": "6d2edd1a8160f054",
+        "type": "debug",
+        "z": "8f708038682bad2f",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "c8d0922261efaa45",
+        "type": "function",
+        "z": "8f708038682bad2f",
+        "name": "\"!\" filter",
+        "func": "if (typeof msg.payload === \"string\" && msg.payload.startsWith(\"!\")) {\n    msg.payload = msg.payload.substring(1);\n    return msg;\n}\nreturn null;    // block everything else",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 460,
+        "wires": [
+            [
+                "6d2edd1a8160f054",
+                "f51ee076fc377fba"
+            ]
+        ]
+    },
+    {
+        "id": "5acb57762ef13ba8",
+        "type": "mqtt in",
+        "z": "8f708038682bad2f",
+        "name": "",
+        "topic": "2474042/feeds/led",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1116d2b2529ec5f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 470,
+        "y": 740,
+        "wires": [
+            [
+                "4adc0a106bd9d84d"
+            ]
+        ]
+    },
+    {
+        "id": "2231181f57890de1",
+        "type": "mqtt out",
+        "z": "8f708038682bad2f",
+        "name": "",
+        "topic": "2474042/feeds/led",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1116d2b2529ec5f8",
+        "x": 1030,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "b3fb9c5c9c406cba",
+        "type": "comment",
+        "z": "8f708038682bad2f",
+        "name": "ACK",
+        "info": "Acknowledge because Adafruit sucks",
+        "x": 630,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "9cd921954e464ddf",
+        "type": "function",
+        "z": "8f708038682bad2f",
+        "name": "Check & Send",
+        "func": "if (!flow.get('ackReceived')) {\n    return msg;\n} else {\n    return null;\n}",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 700,
+        "wires": [
+            [
+                "ee34e8ad317d1953",
+                "2231181f57890de1"
+            ]
+        ]
+    },
+    {
+        "id": "4adc0a106bd9d84d",
+        "type": "switch",
+        "z": "8f708038682bad2f",
+        "name": "Is ACK?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ACK",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 660,
+        "y": 740,
+        "wires": [
+            [
+                "ef7d764a543a7adb"
+            ]
+        ]
+    },
+    {
+        "id": "ef7d764a543a7adb",
+        "type": "function",
+        "z": "8f708038682bad2f",
+        "name": "Set ACK received",
+        "func": "flow.set('ackReceived', true);\nreturn msg;",
+        "outputs": 1,
+        "x": 870,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee34e8ad317d1953",
+        "type": "delay",
+        "z": "8f708038682bad2f",
+        "name": "Repeat every 1s",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 800,
+        "y": 660,
+        "wires": [
+            [
+                "9cd921954e464ddf"
+            ]
+        ]
+    },
+    {
+        "id": "0f7582daeb4dfbb7",
+        "type": "function",
+        "z": "8f708038682bad2f",
+        "name": "ACK",
+        "func": "flow.set('ackReceived', false);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 700,
+        "wires": [
+            [
+                "9cd921954e464ddf"
+            ]
+        ]
+    },
+    {
+        "id": "f51ee076fc377fba",
+        "type": "function",
+        "z": "8f708038682bad2f",
+        "name": "Checker",
+        "func": "if (msg.payload == 7355608 || \"RFID\") {\n    msg.payload = \"Correct!\";\n} else {\n    msg.payload = \"Incorrect!\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 540,
+        "wires": [
+            [
+                "0f7582daeb4dfbb7"
+            ]
+        ]
+    },
+    {
+        "id": "1c7e86340c8619d0",
+        "type": "comment",
+        "z": "8f708038682bad2f",
+        "name": "Correct pass checker",
+        "info": "This checks if the password is correct.",
+        "x": 880,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "b3e88db37e4d5f12",
+        "type": "mqtt in",
+        "z": "8f708038682bad2f",
+        "name": "",
+        "topic": "2474042/feeds/led",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1116d2b2529ec5f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 470,
+        "y": 320,
+        "wires": [
+            [
+                "4985117025e46e25"
+            ]
+        ]
+    },
+    {
+        "id": "4985117025e46e25",
+        "type": "function",
+        "z": "8f708038682bad2f",
+        "name": "\"#\" filter",
+        "func": "if (typeof msg.payload === \"string\" && msg.payload.startsWith(\"#\")) {\n    msg.payload = msg.payload.substring(1);\n    return msg;\n}\nreturn null;    // block everything else",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 320,
+        "wires": [
+            [
+                "61a6bf714c67a09c",
+                "39cd76e43c93da84",
+                "4aaffcc70b9e3df4",
+                "560c75ca8606888b"
+            ]
+        ]
+    },
+    {
+        "id": "38f83a36682c26dd",
+        "type": "debug",
+        "z": "8f708038682bad2f",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "64dd58ba128e818f",
+        "type": "comment",
+        "z": "8f708038682bad2f",
+        "name": "Buzzer?",
+        "info": "There are multiple buzzers coded.\n\nbuzzerPulse: Pulses the buzzer, may not be used at all\n\nbuzzerLong: Will beep it if the wrong code is inputted\n\nbuzzerBuzz: constant, for when the DOOR or WINDOW is opened while ARMED\n\nbuzzerOff: turns the buzzer off ",
+        "x": 940,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ae2f908e0d50f897",
+        "type": "comment",
+        "z": "8f708038682bad2f",
+        "name": "Ampoule?",
+        "info": "Allumer quand le systeme est armee\nSinon il est eteint",
+        "x": 940,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "61a6bf714c67a09c",
+        "type": "function",
+        "z": "8f708038682bad2f",
+        "name": "buzzerLong",
+        "func": "if (msg.payload == \"incorrect\") {\n    msg.payload = \"buzzerLong\";\n    return msg;\n} \nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 300,
+        "wires": [
+            [
+                "38f83a36682c26dd"
+            ]
+        ]
+    },
+    {
+        "id": "560c75ca8606888b",
+        "type": "function",
+        "z": "8f708038682bad2f",
+        "name": "buzzerPulse",
+        "func": "if (msg.payload == \"dobuzzerPulse\") {\n    msg.payload = \"buzzerPulse\";\n    return msg;\n}\nreturn null;  ",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 260,
+        "wires": [
+            [
+                "38f83a36682c26dd"
+            ]
+        ]
+    },
+    {
+        "id": "39cd76e43c93da84",
+        "type": "function",
+        "z": "8f708038682bad2f",
+        "name": "buzzerBuzz",
+        "func": "if ([\"WIN_1\", \"WIN_2\", \"WIN_3\", \"DOOR\"].includes(msg.payload)) {\n    msg.payload = \"buzzerBuzz\";\n} else {\n    return null;\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 340,
+        "wires": [
+            [
+                "38f83a36682c26dd"
+            ]
+        ]
+    },
+    {
+        "id": "4aaffcc70b9e3df4",
+        "type": "function",
+        "z": "8f708038682bad2f",
+        "name": "buzzerOff",
+        "func": "if (msg.payload == \"Correct\") {\n    msg.payload = \"buzzerOff\";\n    return msg;\n}\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 380,
+        "wires": [
+            [
+                "38f83a36682c26dd"
+            ]
+        ]
     }
 ]
