@@ -402,7 +402,7 @@
         "type": "comment",
         "z": "8f708038682bad2f",
         "name": "Buzzer?",
-        "info": "There are multiple buzzers coded.\n\nbuzzerPulse: Pulses the buzzer, may not be used at all\n\nbuzzerLong: Will beep it if the wrong code is inputted\n\nbuzzerBuzz: constant, for when the DOOR or WINDOW is opened while ARMED\n\nbuzzerOff: turns the buzzer off ",
+        "info": "There are multiple buzzers coded.\n\nbuzzerPulse: Pulses the buzzer, may not be used at all (maybe if the servo detects it being close?)\n\nbuzzerLong: Will beep it if the wrong code is inputted\n\nbuzzerBuzz: constant, for when the DOOR or WINDOW is opened while ARMED\n\nbuzzerOff: turns the buzzer off ",
         "x": 940,
         "y": 220,
         "wires": []
