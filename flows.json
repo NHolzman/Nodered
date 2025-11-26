@@ -422,7 +422,7 @@
         "type": "function",
         "z": "8f708038682bad2f",
         "name": "buzzerLong",
-        "func": "if (msg.payload == \"incorrect\") {\n    msg.payload = \"buzzerLong\";\n    return msg;\n} \nreturn null;\n",
+        "func": "if (msg.payload == \"#incorrectPassword\") {\n    msg.payload = \"#buzzerLong\";\n    return msg;\n} \nreturn null;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -433,7 +433,8 @@
         "y": 300,
         "wires": [
             [
-                "38f83a36682c26dd"
+                "38f83a36682c26dd",
+                "9992b87dd1adbf15"
             ]
         ]
     },
@@ -442,7 +443,7 @@
         "type": "function",
         "z": "8f708038682bad2f",
         "name": "buzzerPulse",
-        "func": "if (msg.payload == \"dobuzzerPulse\") {\n    msg.payload = \"buzzerPulse\";\n    return msg;\n}\nreturn null;  ",
+        "func": "if (msg.payload == \"#close\") {\n    msg.payload = \"buzzerPulse\";\n    return msg;\n}\nreturn null;  ",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -483,7 +484,7 @@
         "type": "function",
         "z": "8f708038682bad2f",
         "name": "buzzerOff",
-        "func": "if (msg.payload == \"#incorrectPassword\") {\n    msg.payload = \"#buzzerOff\";\n    return msg;\n}\nreturn null;\n",
+        "func": "if (msg.payload == \"#correctPassword\") {\n    msg.payload = \"#buzzerOff\";\n    return msg;\n}\nreturn null;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -494,7 +495,8 @@
         "y": 380,
         "wires": [
             [
-                "38f83a36682c26dd"
+                "38f83a36682c26dd",
+                "9992b87dd1adbf15"
             ]
         ]
     },
