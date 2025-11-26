@@ -312,7 +312,7 @@
         "type": "function",
         "z": "8f708038682bad2f",
         "name": "Checker",
-        "func": "if (msg.payload == 7355608 || \"RFID\") {\n    msg.payload = \"Correct!\";\n} else {\n    msg.payload = \"Incorrect!\";\n}\nreturn msg;",
+        "func": "if (msg.payload == 7355608 || msg.payload == \"RFID\") {\n    msg.payload = \"Correct!\";\n} else {\n    msg.payload = \"Incorrect!\";\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -331,9 +331,9 @@
         "id": "1c7e86340c8619d0",
         "type": "comment",
         "z": "8f708038682bad2f",
-        "name": "Correct pass checker",
+        "name": "<-- Correct pass checker",
         "info": "This checks if the password is correct.",
-        "x": 880,
+        "x": 870,
         "y": 540,
         "wires": []
     },
@@ -515,51 +515,6 @@
         "info": "Gere si une fenetre est ouvert",
         "x": 460,
         "y": 280,
-        "wires": []
-    },
-    {
-        "id": "11674516494e6cf4",
-        "type": "inject",
-        "z": "8f708038682bad2f",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 160,
-        "y": 160,
-        "wires": [
-            [
-                "959e105e8816a19c"
-            ]
-        ]
-    },
-    {
-        "id": "959e105e8816a19c",
-        "type": "debug",
-        "z": "8f708038682bad2f",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 300,
-        "y": 300,
         "wires": []
     }
 ]
