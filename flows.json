@@ -465,7 +465,7 @@
         "type": "function",
         "z": "8f708038682bad2f",
         "name": "buzzerBuzz",
-        "func": "if ([\"WIN_1\", \"WIN_2\", \"WIN_3\", \"DOOR\"].includes(msg.payload)) {\n    msg.payload = \"correctPassword\";\n} else {\n    return null;\n}\nreturn msg;\n",
+        "func": "if ([\"WIN_1\", \"WIN_2\", \"WIN_3\", \"DOOR\"].includes(msg.payload)) {\n    msg.payload = \"#correctPassword\";\n} else {\n    return null;\n}\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
