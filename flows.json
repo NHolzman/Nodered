@@ -496,5 +496,25 @@
                 "38f83a36682c26dd"
             ]
         ]
+    },
+    {
+        "id": "ba75f67b949e0aff",
+        "type": "comment",
+        "z": "8f708038682bad2f",
+        "name": "RFID/keypad?",
+        "info": "Gere si le bon est scanned/inputted",
+        "x": 470,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "9614d9b8ca2902cb",
+        "type": "comment",
+        "z": "8f708038682bad2f",
+        "name": "Fenetre?",
+        "info": "Gere si une fenetre est ouvert",
+        "x": 460,
+        "y": 280,
+        "wires": []
     }
 ]
