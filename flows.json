@@ -394,8 +394,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1420,
-        "y": 320,
+        "x": 1160,
+        "y": 440,
         "wires": []
     },
     {
@@ -576,8 +576,8 @@
         "correl": "",
         "expiry": "",
         "broker": "1116d2b2529ec5f8",
-        "x": 1310,
-        "y": 260,
+        "x": 1210,
+        "y": 340,
         "wires": []
     },
     {
