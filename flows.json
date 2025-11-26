@@ -473,7 +473,8 @@
         "y": 340,
         "wires": [
             [
-                "38f83a36682c26dd"
+                "38f83a36682c26dd",
+                "9992b87dd1adbf15"
             ]
         ]
     },
@@ -522,7 +523,7 @@
         "type": "comment",
         "z": "8f708038682bad2f",
         "name": "Arduino (2)",
-        "info": "| Trigger / Context             | Topic             | Message     | Notes                                       |\n| ----------------------------- | ----------------- | ----------- | ------------------------------------------- |\n| BLE LED turned ON             | 2474042/feeds/led | #close      | Indicates the lock/window closed            |\n| BLE LED turned OFF            | 2474042/feeds/led | #away       | Indicates LED is OFF                        |\n| Web keypad '*' pressed        | 2474042/feeds/led | <position>  | Sends current entered number for validation |\n| Physical keypad '*' pressed   | 2474042/feeds/led | !<position> | Sends current entered number for validation |\n| Window #WIN_0 received        | 2474042/feeds/led | *WIN_0      | Acknowledgment                              |\n| Window #WIN_1 received        | 2474042/feeds/led | *WIN_1      | Acknowledgment                              |\n| Window #WIN_2 received        | 2474042/feeds/led | *WIN_2      | Acknowledgment                              |\n| Window #WIN_3 received        | 2474042/feeds/led | *WIN_3      | Acknowledgment                              |\n| (Commented out) periodic MQTT | 247               |             |                                             |\n\n\n\n| Expected Message   | Topic             | Notes                                        |\n| ------------------ | ----------------- | -------------------------------------------- |\n| #correctPassword   | 2474042/feeds/led | Unlock the lock; triggers LCD update         |\n| #incorrectPassword | 2474042/feeds/led | Wrong password; triggers LCD animation/reset |\n| #WIN_0             | 2474042/feeds/led | Sets windowStatus = 0                        |\n| #WIN_1             | 2474042/feeds/led | Sets windowStatus = 1                        |\n| #WIN_2             | 2474042/feeds/led | Sets windowStatus = 2                        |\n| #WIN_3             | 2474042/feeds/led | Sets windowStatus = 3                        |\n\n\nIf its \"checked (X)\" it means that node red has the nodes to do it (scroll for the top one -->). ",
+        "info": "| Trigger / Context             | Topic             | Message     | Notes                                       |\n| ----------------------------- | ----------------- | ----------- | ------------------------------------------- |\n| BLE LED turned ON             | 2474042/feeds/led | #close      | Indicates the lock/window closed            |\n| BLE LED turned OFF            | 2474042/feeds/led | #away       | Indicates LED is OFF                        |\n| Web keypad '*' pressed        | 2474042/feeds/led | <position>  | Sends current entered number for validation |\n| Physical keypad '*' pressed   | 2474042/feeds/led | !<position> | Sends current entered number for validation |\n\n\n\n| Expected Message   | Topic             | Notes                                        |\n| ------------------ | ----------------- | -------------------------------------------- |\n| #correctPassword   | 2474042/feeds/led | Unlock the lock; triggers LCD update         |X\n| #incorrectPassword | 2474042/feeds/led | Wrong password; triggers LCD animation/reset |X\n| #WIN_0             | 2474042/feeds/led | Sets windowStatus = 0                        |X\n| #WIN_1             | 2474042/feeds/led | Sets windowStatus = 1                        |X\n| #WIN_2             | 2474042/feeds/led | Sets windowStatus = 2                        |X\n| #WIN_3             | 2474042/feeds/led | Sets windowStatus = 3                        |X\n| #DOOR              | 2474042/feeds/led | Does something idk                           |X\n\n\nIf its \"checked (X)\" it means that node red has the nodes to do it (scroll for the top one -->). ",
         "x": 140,
         "y": 320,
         "wires": []
@@ -555,6 +556,24 @@
         "info": "| Trigger / Context                 | Topic             | Message         | Notes                   |\n| --------------------------------- | ----------------- | --------------- | ----------------------- |\n| RFID card detected                | 2474042/feeds/led | Card UID in HEX | Example: `04A3B21C`     |\n| Window sensor state change (both) | 2474042/feeds/led | #WIN_0          | Both windows closed     |(unused, useless)\n| Window sensor state change        | 2474042/feeds/led | #WIN_1          | Left closed, Right open |\n| Window sensor state change        | 2474042/feeds/led | #WIN_2          | Left open, Right closed |\n| Window sensor state change        | 2474042/feeds/led | #WIN_3          | Both windows open       |\n\nThis Photon only sends! \n(Sroll -->)",
         "x": 140,
         "y": 440,
+        "wires": []
+    },
+    {
+        "id": "9992b87dd1adbf15",
+        "type": "mqtt out",
+        "z": "8f708038682bad2f",
+        "name": "",
+        "topic": "2474042/feeds/led",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1116d2b2529ec5f8",
+        "x": 1250,
+        "y": 380,
         "wires": []
     }
 ]
