@@ -199,7 +199,7 @@
         "type": "comment",
         "z": "8f708038682bad2f",
         "name": "ACK",
-        "info": "Acknowledge because Adafruit sucks",
+        "info": "Acknowledge because Adafruit sucks and drops so much inputs.\n\nThis data loss is unacceptable for the passwords, but okay for the windows.\n\nThis whole block really.",
         "x": 630,
         "y": 660,
         "wires": []
@@ -515,6 +515,46 @@
         "info": "Gere si une fenetre est ouvert",
         "x": 460,
         "y": 280,
+        "wires": []
+    },
+    {
+        "id": "27881117b41f99e0",
+        "type": "comment",
+        "z": "8f708038682bad2f",
+        "name": "Arduino (2)",
+        "info": "| Trigger / Context             | Topic             | Message     | Notes                                       |\n| ----------------------------- | ----------------- | ----------- | ------------------------------------------- |\n| BLE LED turned ON             | 2474042/feeds/led | #close      | Indicates the lock/window closed            |\n| BLE LED turned OFF            | 2474042/feeds/led | #away       | Indicates LED is OFF                        |\n| Web keypad '*' pressed        | 2474042/feeds/led | <position>  | Sends current entered number for validation |\n| Physical keypad '*' pressed   | 2474042/feeds/led | !<position> | Sends current entered number for validation |\n| Window #WIN_0 received        | 2474042/feeds/led | *WIN_0      | Acknowledgment                              |\n| Window #WIN_1 received        | 2474042/feeds/led | *WIN_1      | Acknowledgment                              |\n| Window #WIN_2 received        | 2474042/feeds/led | *WIN_2      | Acknowledgment                              |\n| Window #WIN_3 received        | 2474042/feeds/led | *WIN_3      | Acknowledgment                              |\n| (Commented out) periodic MQTT | 247               |             |                                             |\n\n\n\n| Expected Message   | Topic             | Notes                                        |\n| ------------------ | ----------------- | -------------------------------------------- |\n| #correctPassword   | 2474042/feeds/led | Unlock the lock; triggers LCD update         |\n| #incorrectPassword | 2474042/feeds/led | Wrong password; triggers LCD animation/reset |\n| #WIN_0             | 2474042/feeds/led | Sets windowStatus = 0                        |\n| #WIN_1             | 2474042/feeds/led | Sets windowStatus = 1                        |\n| #WIN_2             | 2474042/feeds/led | Sets windowStatus = 2                        |\n| #WIN_3             | 2474042/feeds/led | Sets windowStatus = 3                        |\n",
+        "x": 140,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "7e618e0a5f9354dc",
+        "type": "comment",
+        "z": "8f708038682bad2f",
+        "name": "X - Arduino (1) - X",
+        "info": "Ce Arduino n'utilise pas lq MQTT par contre il envoie du BT aux Arduino (2), qui envoie lui\nmeme du MQTT.\n\n\nFrom Arduino (2):\n\n| Trigger / Context             | Topic             | Message     | Notes                                       |\n| ----------------------------- | ----------------- | ----------- | ------------------------------------------- |\n| BLE LED turned ON             | 2474042/feeds/led | #close      | Indicates the lock/window closed            |\n| BLE LED turned OFF            | 2474042/feeds/led | #away       | Indicates LED is OFF   \n\nIt sends it to Arduino (2), and then Arduino (2) takes care of the rest.",
+        "x": 170,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c737cb18e681702f",
+        "type": "comment",
+        "z": "8f708038682bad2f",
+        "name": "Photon (1)",
+        "info": "| Message Payload | Topic                   | Action / Notes                           |\n| --------------- | ----------------------- | ---------------------------------------- |\n| buzzerPulse     | cak47/Feeds/Ampoulelock | Short buzzer pulse                       |\n| buzzerLong      | cak47/Feeds/Ampoulelock | Turns on long buzzer alert (`alerte=1`)  |\n| buzzerBuzz      | cak47/Feeds/Ampoulelock | Continuous \"earrape\" buzzer (`alerte=2`) |\n| buzzerOff       | cak47/Feeds/Ampoulelock | Turn off buzzer (`alerte=0`)             |\n| ampoule         | cak47/Feeds/Ampoulelock | Turn ON lamp/ampoule                     |\n| ampouleOff      | cak47/Feeds/Ampoulelock | Turn OFF lamp/ampoule                    |\n| #unlock         | cak47/Feeds/Ampoulelock | Unlock the lock (digital HIGH on `lock`) |\n\n\nThis Photon only receives!",
+        "x": 140,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "06f3cb0698dbf1a5",
+        "type": "comment",
+        "z": "8f708038682bad2f",
+        "name": "Photon (2)",
+        "info": "| Trigger / Context                 | Topic             | Message         | Notes                   |\n| --------------------------------- | ----------------- | --------------- | ----------------------- |\n| RFID card detected                | 2474042/feeds/led | Card UID in HEX | Example: `04A3B21C`     |\n| Window sensor state change (both) | 2474042/feeds/led | #WIN_0          | Both windows closed     |\n| Window sensor state change        | 2474042/feeds/led | #WIN_1          | Left closed, Right open |\n| Window sensor state change        | 2474042/feeds/led | #WIN_2          | Left open, Right closed |\n| Window sensor state change        | 2474042/feeds/led | #WIN_3          | Both windows open       |\n\nThis Photon only sends!",
+        "x": 140,
+        "y": 440,
         "wires": []
     }
 ]
