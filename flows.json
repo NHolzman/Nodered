@@ -89,11 +89,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 470,
+        "x": 390,
         "y": 460,
         "wires": [
             [
-                "c8d0922261efaa45"
+                "c8d0922261efaa45",
+                "a8ade83b2da878e0"
             ]
         ]
     },
@@ -130,7 +131,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
+        "x": 740,
         "y": 460,
         "wires": []
     },
@@ -146,7 +147,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
+        "x": 580,
         "y": 460,
         "wires": [
             [
@@ -168,7 +169,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 470,
+        "x": 390,
         "y": 740,
         "wires": [
             [
@@ -190,7 +191,7 @@
         "correl": "",
         "expiry": "",
         "broker": "1116d2b2529ec5f8",
-        "x": 1030,
+        "x": 950,
         "y": 680,
         "wires": []
     },
@@ -200,7 +201,7 @@
         "z": "8f708038682bad2f",
         "name": "ACK",
         "info": "Acknowledge because Adafruit sucks and drops so much inputs.\n\nThis data loss is unacceptable for the passwords, but okay for the windows.\n\nThis whole block really.",
-        "x": 630,
+        "x": 550,
         "y": 660,
         "wires": []
     },
@@ -216,7 +217,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 800,
+        "x": 720,
         "y": 700,
         "wires": [
             [
@@ -242,7 +243,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 660,
+        "x": 580,
         "y": 740,
         "wires": [
             [
@@ -257,7 +258,7 @@
         "name": "Set ACK received",
         "func": "flow.set('ackReceived', true);\nreturn msg;",
         "outputs": 1,
-        "x": 870,
+        "x": 790,
         "y": 740,
         "wires": [
             []
@@ -280,7 +281,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 800,
+        "x": 720,
         "y": 660,
         "wires": [
             [
@@ -300,7 +301,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
+        "x": 550,
         "y": 700,
         "wires": [
             [
@@ -320,7 +321,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
+        "x": 600,
         "y": 540,
         "wires": [
             [
@@ -333,9 +334,9 @@
         "id": "1c7e86340c8619d0",
         "type": "comment",
         "z": "8f708038682bad2f",
-        "name": "<-- Correct pass checker",
+        "name": "Correct pass checker-->",
         "info": "This checks if the password is correct.",
-        "x": 870,
+        "x": 400,
         "y": 540,
         "wires": []
     },
@@ -351,15 +352,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 700,
-        "y": 320,
+        "x": 800,
+        "y": 540,
         "wires": [
             [
                 "61a6bf714c67a09c",
-                "39cd76e43c93da84",
-                "4aaffcc70b9e3df4",
-                "560c75ca8606888b",
-                "7c6f5f80e37ea924"
+                "4aaffcc70b9e3df4"
             ]
         ]
     },
@@ -375,8 +373,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1160,
-        "y": 440,
+        "x": 1220,
+        "y": 420,
         "wires": []
     },
     {
@@ -385,8 +383,8 @@
         "z": "8f708038682bad2f",
         "name": "Buzzer?",
         "info": "There are multiple buzzers coded.\n\nbuzzerPulse: Pulses the buzzer, may not be used at all (maybe if the servo detects it being close?)\n\nbuzzerLong: Will beep it if the wrong code is inputted\n\nbuzzerBuzz: constant, for when the DOOR or WINDOW is opened while ARMED\n\nbuzzerOff: turns the buzzer off ",
-        "x": 940,
-        "y": 220,
+        "x": 1160,
+        "y": 200,
         "wires": []
     },
     {
@@ -395,8 +393,8 @@
         "z": "8f708038682bad2f",
         "name": "Ampoule?",
         "info": "Allumer quand le systeme est armee\nSinon il est eteint",
-        "x": 940,
-        "y": 180,
+        "x": 1160,
+        "y": 160,
         "wires": []
     },
     {
@@ -411,8 +409,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 950,
-        "y": 300,
+        "x": 990,
+        "y": 520,
         "wires": [
             [
                 "38f83a36682c26dd",
@@ -432,8 +430,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 950,
-        "y": 260,
+        "x": 990,
+        "y": 360,
         "wires": [
             [
                 "38f83a36682c26dd",
@@ -453,8 +451,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 950,
-        "y": 340,
+        "x": 990,
+        "y": 400,
         "wires": [
             [
                 "38f83a36682c26dd",
@@ -474,8 +472,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 940,
-        "y": 380,
+        "x": 980,
+        "y": 560,
         "wires": [
             [
                 "38f83a36682c26dd",
@@ -489,7 +487,7 @@
         "z": "8f708038682bad2f",
         "name": "RFID/keypad?",
         "info": "Gere si le bon est scanned/inputted",
-        "x": 470,
+        "x": 390,
         "y": 420,
         "wires": []
     },
@@ -499,7 +497,7 @@
         "z": "8f708038682bad2f",
         "name": "Fenetre?",
         "info": "Gere si une fenetre est ouvert",
-        "x": 460,
+        "x": 380,
         "y": 280,
         "wires": []
     },
@@ -557,34 +555,29 @@
         "correl": "",
         "expiry": "",
         "broker": "1116d2b2529ec5f8",
-        "x": 1210,
-        "y": 340,
+        "x": 1250,
+        "y": 540,
         "wires": []
     },
     {
-        "id": "7c6f5f80e37ea924",
-        "type": "debug",
+        "id": "a8ade83b2da878e0",
+        "type": "function",
         "z": "8f708038682bad2f",
-        "name": "debug 4",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 720,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "2c4237c374a4aa23",
-        "type": "comment",
-        "z": "8f708038682bad2f",
-        "name": "Fix",
-        "info": "Redundant sends which is a pain in the ass",
-        "x": 1210,
-        "y": 200,
-        "wires": []
+        "name": "\"#\" filter",
+        "func": "if (typeof msg.payload === \"string\" && msg.payload.startsWith(\"#\")) {\n    msg.payload = msg.payload.substring(1);\n    return msg;\n}\nreturn null;    // block everything else",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 380,
+        "wires": [
+            [
+                "560c75ca8606888b",
+                "39cd76e43c93da84"
+            ]
+        ]
     }
 ]
