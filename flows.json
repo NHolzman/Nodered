@@ -537,7 +537,7 @@
         "type": "comment",
         "z": "8f708038682bad2f",
         "name": "X - Arduino (1) - X",
-        "info": "Ce Arduino n'utilise pas lq MQTT par contre il envoie du BT aux Arduino (2), qui envoie lui\nmeme du MQTT.\n\n\nFrom Arduino (2):\n\n| Trigger / Context             | Topic             | Message     | Notes                                       |\n| ----------------------------- | ----------------- | ----------- | ------------------------------------------- |\n| BLE LED turned ON             | 2474042/feeds/led | #close      | Indicates the lock/window closed            |\n| BLE LED turned OFF            | 2474042/feeds/led | #away       | Indicates LED is OFF   \n\nIt sends it to Arduino (2), and then Arduino (2) takes care of the rest.",
+        "info": "Ce Arduino n'utilise pas lq MQTT par contre il envoie du BT aux Arduino (2), qui envoie lui\nmeme du MQTT.\n\n\nFrom Arduino (2):\n\n| Trigger / Context             | Topic             | Message     | Notes                                       |\n| ----------------------------- | ----------------- | ----------- | ------------------------------------------- |X\n| BLE LED turned ON             | 2474042/feeds/led | #close      | Indicates the lock/window closed            |*\n| BLE LED turned OFF            | 2474042/feeds/led | #away       | Indicates LED is OFF   \n\nIt sends it to Arduino (2), and then Arduino (2) takes care of the rest.",
         "x": 170,
         "y": 260,
         "wires": []
