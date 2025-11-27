@@ -383,8 +383,8 @@
         "z": "8f708038682bad2f",
         "name": "Buzzer?",
         "info": "There are multiple buzzers coded.\n\nbuzzerPulse: Pulses the buzzer, may not be used at all (maybe if the servo detects it being close?)\n\nbuzzerLong: Will beep it if the wrong code is inputted\n\nbuzzerBuzz: constant, for when the DOOR or WINDOW is opened while ARMED\n\nbuzzerOff: turns the buzzer off ",
-        "x": 1160,
-        "y": 200,
+        "x": 980,
+        "y": 480,
         "wires": []
     },
     {
@@ -393,8 +393,8 @@
         "z": "8f708038682bad2f",
         "name": "Ampoule?",
         "info": "Allumer quand le systeme est armee\nSinon il est eteint",
-        "x": 1160,
-        "y": 160,
+        "x": 980,
+        "y": 440,
         "wires": []
     },
     {
@@ -444,7 +444,7 @@
         "type": "function",
         "z": "8f708038682bad2f",
         "name": "buzzerBuzz",
-        "func": "if ([\"WIN_1\", \"WIN_2\", \"WIN_3\", \"DOOR\"].includes(msg.payload)) {\n    msg.payload = \"#correctPassword\";\n} else {\n    return null;\n}\nreturn msg;\n",
+        "func": "if ([\"WIN_1\", \"WIN_2\", \"WIN_3\", \"DOOR\"].includes(msg.payload)) {\n    msg.payload = \"#buzzerBuzz\";\n} else {\n    return null;\n}\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
