@@ -579,5 +579,21 @@
                 "39cd76e43c93da84"
             ]
         ]
+    },
+    {
+        "id": "30b83efb2735fdd0",
+        "type": "debug",
+        "z": "8f708038682bad2f",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 200,
+        "wires": []
     }
 ]
