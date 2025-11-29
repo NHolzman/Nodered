@@ -39,27 +39,6 @@
         "sessionExpiry": ""
     },
     {
-        "id": "eb7377c397ef064e",
-        "type": "mqtt in",
-        "z": "8f708038682bad2f",
-        "name": "",
-        "topic": "NHolzman/feeds/led",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "1116d2b2529ec5f8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 470,
-        "y": 160,
-        "wires": [
-            [
-                "b5d846f5283d0f49"
-            ]
-        ]
-    },
-    {
         "id": "b5d846f5283d0f49",
         "type": "debug",
         "z": "8f708038682bad2f",
