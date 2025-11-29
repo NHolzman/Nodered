@@ -357,7 +357,8 @@
         "wires": [
             [
                 "61a6bf714c67a09c",
-                "4aaffcc70b9e3df4"
+                "4aaffcc70b9e3df4",
+                "30b83efb2735fdd0"
             ]
         ]
     },
@@ -576,7 +577,8 @@
         "wires": [
             [
                 "560c75ca8606888b",
-                "39cd76e43c93da84"
+                "39cd76e43c93da84",
+                "30b83efb2735fdd0"
             ]
         ]
     },
@@ -592,8 +594,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1060,
-        "y": 200,
+        "x": 940,
+        "y": 240,
         "wires": []
     }
 ]
