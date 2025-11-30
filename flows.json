@@ -572,5 +572,15 @@
         "x": 940,
         "y": 240,
         "wires": []
+    },
+    {
+        "id": "6af96e66e6496978",
+        "type": "comment",
+        "z": "8f708038682bad2f",
+        "name": "Removed",
+        "info": "Too much MQTT spam...",
+        "x": 1180,
+        "y": 140,
+        "wires": []
     }
 ]
