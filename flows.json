@@ -904,15 +904,15 @@
         "selectionType": "none",
         "columns": [
             {
-                "title": "",
-                "key": "",
+                "title": "a",
+                "key": "a",
                 "keyType": "key",
                 "type": "text",
-                "width": "",
+                "width": "a",
                 "align": "start"
             }
         ],
-        "mobileBreakpoint": "sm",
+        "mobileBreakpoint": "lg",
         "mobileBreakpointType": "defaults",
         "action": "append",
         "className": "",
