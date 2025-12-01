@@ -886,19 +886,39 @@
         "wires": []
     },
     {
-        "id": "e1ea94802307fbab",
-        "type": "ui-progress",
+        "id": "f99eba372a262825",
+        "type": "ui-table",
         "z": "8f708038682bad2f",
         "group": "d87adb4827b6ce4c",
-        "name": "",
-        "label": "Progress",
+        "name": "aa",
+        "label": "",
         "order": 1,
         "width": 0,
         "height": 0,
-        "color": "",
+        "maxrows": "57",
+        "passthru": false,
+        "autocols": false,
+        "showSearch": true,
+        "deselect": false,
+        "selectionType": "none",
+        "columns": [
+            {
+                "title": "",
+                "key": "",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "append",
         "className": "",
-        "x": 120,
-        "y": 680,
-        "wires": []
+        "x": 170,
+        "y": 660,
+        "wires": [
+            []
+        ]
     }
 ]
