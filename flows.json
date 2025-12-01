@@ -118,8 +118,8 @@
         "type": "ui-group",
         "name": "Group 1",
         "page": "18dfb143933e99f8",
-        "width": "3",
-        "height": "3",
+        "width": "13",
+        "height": "2",
         "order": 1,
         "showTitle": true,
         "className": "",
@@ -787,8 +787,7 @@
         "y": 720,
         "wires": [
             [
-                "8ad4b38435b78fe3",
-                "5823b49c9d2030d2"
+                "8ad4b38435b78fe3"
             ]
         ]
     },
@@ -800,8 +799,8 @@
         "name": "",
         "label": "",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": "13",
+        "height": "2",
         "maxrows": 0,
         "passthru": false,
         "autocols": true,
@@ -815,19 +814,6 @@
         "className": "",
         "x": 1230,
         "y": 780,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5823b49c9d2030d2",
-        "type": "ui-control",
-        "z": "8f708038682bad2f",
-        "name": "",
-        "ui": "d298fb7bb25baaea",
-        "events": "all",
-        "x": 1220,
-        "y": 860,
         "wires": [
             []
         ]
