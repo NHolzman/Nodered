@@ -688,10 +688,10 @@
         "z": "8f708038682bad2f",
         "group": "d87adb4827b6ce4c",
         "name": "Unlock et desarm (3 Sec)",
-        "label": "button",
+        "label": "Unlock et desarm (3 Sec)",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": "3",
+        "height": "1",
         "emulateClick": true,
         "tooltip": "",
         "color": "",
@@ -713,7 +713,7 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 1070,
+        "x": 1010,
         "y": 600,
         "wires": [
             [
