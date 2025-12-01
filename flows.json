@@ -814,5 +814,19 @@
         "x": 1250,
         "y": 780,
         "wires": []
+    },
+    {
+        "id": "09e4c0a9ba5d2d4d",
+        "type": "ui-event",
+        "z": "8f708038682bad2f",
+        "ui": "d298fb7bb25baaea",
+        "name": "asd",
+        "x": 1150,
+        "y": 860,
+        "wires": [
+            [
+                "c53801e8bc959a48"
+            ]
+        ]
     }
 ]
