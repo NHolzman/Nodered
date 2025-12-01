@@ -689,7 +689,7 @@
         "group": "d87adb4827b6ce4c",
         "name": "Unlock et desarm (3 Sec)",
         "label": "Unlock et desarm (3 Sec)",
-        "order": 2,
+        "order": 3,
         "width": "3",
         "height": "1",
         "emulateClick": true,
@@ -744,7 +744,7 @@
         "group": "d87adb4827b6ce4c",
         "name": "Custom command",
         "label": "Write here...",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "topic": "topic",
@@ -786,14 +786,17 @@
         "x": 950,
         "y": 720,
         "wires": [
-            []
+            [
+                "c53801e8bc959a48"
+            ]
         ]
     },
     {
         "id": "c53801e8bc959a48",
         "type": "ui-text",
         "z": "8f708038682bad2f",
-        "order": 0,
+        "group": "d87adb4827b6ce4c",
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "",
@@ -801,7 +804,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "style": false,
-        "font": "Helvetica",
+        "font": "",
         "fontSize": 16,
         "color": "#717171",
         "wrapText": false,
