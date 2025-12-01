@@ -689,7 +689,7 @@
         "group": "d87adb4827b6ce4c",
         "name": "Unlock et desarm (3 Sec)",
         "label": "Unlock et desarm (3 Sec)",
-        "order": 2,
+        "order": 3,
         "width": "3",
         "height": "1",
         "emulateClick": true,
@@ -744,7 +744,7 @@
         "group": "d87adb4827b6ce4c",
         "name": "Custom command",
         "label": "Write here...",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "topic": "topic",
@@ -767,6 +767,51 @@
         "wires": [
             [
                 "9992b87dd1adbf15"
+            ]
+        ]
+    },
+    {
+        "id": "91d047867601b3e9",
+        "type": "ui-text",
+        "z": "8f708038682bad2f",
+        "group": "d87adb4827b6ce4c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payloads",
+        "valueType": "msg",
+        "x": 1130,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "8719a51bfd2247aa",
+        "type": "mqtt in",
+        "z": "8f708038682bad2f",
+        "name": "",
+        "topic": "NHolzman/feeds/led",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1116d2b2529ec5f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 910,
+        "y": 720,
+        "wires": [
+            [
+                "91d047867601b3e9"
             ]
         ]
     }
