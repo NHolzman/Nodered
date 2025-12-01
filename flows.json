@@ -846,7 +846,7 @@
         "type": "function",
         "z": "8f708038682bad2f",
         "name": "function 1",
-        "func": "if ([\"WIN_1\"].includes(msg.payload)) {\n    msg.payload = \"Fenetre 1\";\n} else if ([\"WIN_2\"].includes(msg.payload)) {\n    msg.payload = \"Fenetre 2\";\n} else\nreturn msg;",
+        "func": "if ([\"WIN_1\"].includes(msg.payload)) {\n    msg.payload = \"Fenetre 1\";\n} else if ([\"WIN_2\"].includes(msg.payload)) {\n    msg.payload = \"Fenetre 2\";\n} else\nreturn null;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
