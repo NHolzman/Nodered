@@ -691,7 +691,7 @@
         "group": "d87adb4827b6ce4c",
         "name": "Unlock et desarm (3 Sec)",
         "label": "Unlock et desarm (3 Sec)",
-        "order": 5,
+        "order": 4,
         "width": "3",
         "height": "1",
         "emulateClick": true,
@@ -746,7 +746,7 @@
         "group": "d87adb4827b6ce4c",
         "name": "Custom command",
         "label": "Write here...",
-        "order": 6,
+        "order": 5,
         "width": 0,
         "height": 0,
         "topic": "payload",
@@ -789,8 +789,7 @@
         "y": 720,
         "wires": [
             [
-                "c53801e8bc959a48",
-                "b324af0a6bf7d597"
+                "c53801e8bc959a48"
             ]
         ]
     },
@@ -799,7 +798,7 @@
         "type": "ui-text",
         "z": "8f708038682bad2f",
         "group": "d87adb4827b6ce4c",
-        "order": 3,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
@@ -823,7 +822,7 @@
         "type": "ui-text",
         "z": "8f708038682bad2f",
         "group": "d87adb4827b6ce4c",
-        "order": 2,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "Dernier mot de passe",
@@ -867,7 +866,7 @@
         "type": "ui-text",
         "z": "8f708038682bad2f",
         "group": "d87adb4827b6ce4c",
-        "order": 4,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "Derniere etat fenetre/porte",
@@ -885,36 +884,5 @@
         "x": 1020,
         "y": 320,
         "wires": []
-    },
-    {
-        "id": "b324af0a6bf7d597",
-        "type": "ui-text-input",
-        "z": "8f708038682bad2f",
-        "group": "d87adb4827b6ce4c",
-        "name": "",
-        "label": "text",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "topic": "topic",
-        "topicType": "msg",
-        "mode": "textarea",
-        "tooltip": "",
-        "delay": 300,
-        "passthru": true,
-        "sendOnDelay": false,
-        "sendOnBlur": true,
-        "sendOnEnter": false,
-        "className": "",
-        "clearable": false,
-        "sendOnClear": false,
-        "icon": "",
-        "iconPosition": "left",
-        "iconInnerPosition": "inside",
-        "x": 1270,
-        "y": 720,
-        "wires": [
-            []
-        ]
     }
 ]
