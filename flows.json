@@ -635,7 +635,8 @@
         "wires": [
             [
                 "39cd76e43c93da84",
-                "30b83efb2735fdd0"
+                "30b83efb2735fdd0",
+                "b703acd3352d600d"
             ]
         ]
     },
@@ -690,7 +691,7 @@
         "group": "d87adb4827b6ce4c",
         "name": "Unlock et desarm (3 Sec)",
         "label": "Unlock et desarm (3 Sec)",
-        "order": 4,
+        "order": 3,
         "width": "3",
         "height": "1",
         "emulateClick": true,
@@ -745,7 +746,7 @@
         "group": "d87adb4827b6ce4c",
         "name": "Custom command",
         "label": "Write here...",
-        "order": 3,
+        "order": 4,
         "width": 0,
         "height": 0,
         "topic": "topic",
@@ -839,5 +840,23 @@
         "x": 760,
         "y": 420,
         "wires": []
+    },
+    {
+        "id": "b703acd3352d600d",
+        "type": "function",
+        "z": "8f708038682bad2f",
+        "name": "function 1",
+        "func": "if ([\"WIN_1\"].includes(msg.payload)) {\n    msg.payload = \"Fenetre 1\";\n\n    \n} else if ([\"WIN_1\"].includes(msg.payload)) {\n    msg.payload = \"Fenetre 1\";\n} else\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 320,
+        "wires": [
+            []
+        ]
     }
 ]
