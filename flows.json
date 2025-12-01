@@ -787,8 +787,7 @@
         "y": 720,
         "wires": [
             [
-                "c53801e8bc959a48",
-                "52c09d3fa1a62974"
+                "c53801e8bc959a48"
             ]
         ]
     },
@@ -815,67 +814,5 @@
         "x": 1250,
         "y": 780,
         "wires": []
-    },
-    {
-        "id": "52c09d3fa1a62974",
-        "type": "ui-chart",
-        "z": "8f708038682bad2f",
-        "group": "d87adb4827b6ce4c",
-        "name": "",
-        "label": "chart",
-        "order": 4,
-        "chartType": "line",
-        "category": "topic",
-        "categoryType": "msg",
-        "xAxisLabel": "",
-        "xAxisProperty": "",
-        "xAxisPropertyType": "timestamp",
-        "xAxisType": "time",
-        "xAxisFormat": "",
-        "xAxisFormatType": "auto",
-        "xmin": "",
-        "xmax": "",
-        "yAxisLabel": "",
-        "yAxisProperty": "payload",
-        "yAxisPropertyType": "msg",
-        "ymin": "",
-        "ymax": "",
-        "bins": 10,
-        "action": "append",
-        "stackSeries": false,
-        "pointShape": "circle",
-        "pointRadius": 4,
-        "showLegend": true,
-        "removeOlder": 1,
-        "removeOlderUnit": "3600",
-        "removeOlderPoints": "",
-        "colors": [
-            "#0095ff",
-            "#ff0000",
-            "#ff7f0e",
-            "#2ca02c",
-            "#a347e1",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "textColor": [
-            "#666666"
-        ],
-        "textColorDefault": true,
-        "gridColor": [
-            "#e5e5e5"
-        ],
-        "gridColorDefault": true,
-        "width": 6,
-        "height": 8,
-        "className": "",
-        "interpolation": "linear",
-        "x": 1210,
-        "y": 860,
-        "wires": [
-            []
-        ]
     }
 ]
