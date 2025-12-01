@@ -869,7 +869,7 @@
         "order": 3,
         "width": 0,
         "height": 0,
-        "name": "Derniere fenetre",
+        "name": "Derniere etat fenetre/porte",
         "label": "Derniere fenetre",
         "format": "{{msg.payload}}",
         "layout": "col-center",
@@ -881,7 +881,7 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 980,
+        "x": 1020,
         "y": 320,
         "wires": []
     }
