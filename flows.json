@@ -788,7 +788,7 @@
         "wires": [
             [
                 "c53801e8bc959a48",
-                "027c5b6a2c1646ee"
+                "14d8729b42b1841a"
             ]
         ]
     },
@@ -817,28 +817,39 @@
         "wires": []
     },
     {
-        "id": "027c5b6a2c1646ee",
-        "type": "ui-table",
+        "id": "14d8729b42b1841a",
+        "type": "ui-form",
         "z": "8f708038682bad2f",
-        "group": "d87adb4827b6ce4c",
         "name": "",
-        "label": "a",
+        "group": "d87adb4827b6ce4c",
+        "label": "",
         "order": 1,
-        "width": "12",
-        "height": "6",
-        "maxrows": "8",
-        "passthru": false,
-        "autocols": false,
-        "showSearch": false,
-        "deselect": true,
-        "selectionType": "none",
-        "columns": [],
-        "mobileBreakpoint": "lg",
-        "mobileBreakpointType": "defaults",
-        "action": "replace",
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "",
+                "key": "",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "clear",
+        "resetOnSubmit": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
         "className": "",
-        "x": 1230,
-        "y": 880,
+        "passthru": false,
+        "dropdownOptions": [],
+        "x": 1190,
+        "y": 860,
         "wires": [
             []
         ]
