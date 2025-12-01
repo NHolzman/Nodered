@@ -884,5 +884,21 @@
         "x": 1020,
         "y": 320,
         "wires": []
+    },
+    {
+        "id": "e1ea94802307fbab",
+        "type": "ui-progress",
+        "z": "8f708038682bad2f",
+        "group": "",
+        "name": "",
+        "label": "Progress",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "color": "",
+        "className": "",
+        "x": 120,
+        "y": 680,
+        "wires": []
     }
 ]
