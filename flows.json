@@ -506,7 +506,7 @@
         "type": "function",
         "z": "8f708038682bad2f",
         "name": "buzzerBuzz",
-        "func": "if ([\"WIN_1\", \"WIN_2\", \"WIN_3\", \"DOOR\"].includes(msg.payload)) {\n    msg.payload = \"#buzzerBuzz\";\n} else {\n    return null;\n}\nreturn msg;\n",
+        "func": "if ([\"WIN_1\", \"WIN_2\", \"WIN_3xxxx\", \"DOOR\"].includes(msg.payload)) {\n    msg.payload = \"#buzzerBuzz\";\n} else {\n    return null;\n}\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -518,8 +518,7 @@
         "wires": [
             [
                 "38f83a36682c26dd",
-                "9992b87dd1adbf15",
-                "31c8ed0d59a85e67"
+                "9992b87dd1adbf15"
             ]
         ]
     },
@@ -691,7 +690,7 @@
         "group": "d87adb4827b6ce4c",
         "name": "Unlock et desarm (3 Sec)",
         "label": "Unlock et desarm (3 Sec)",
-        "order": 5,
+        "order": 4,
         "width": "3",
         "height": "1",
         "emulateClick": true,
@@ -746,7 +745,7 @@
         "group": "d87adb4827b6ce4c",
         "name": "Custom command",
         "label": "Write here...",
-        "order": 4,
+        "order": 3,
         "width": 0,
         "height": 0,
         "topic": "topic",
@@ -798,7 +797,7 @@
         "type": "ui-text",
         "z": "8f708038682bad2f",
         "group": "d87adb4827b6ce4c",
-        "order": 3,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
@@ -839,30 +838,6 @@
         "valueType": "msg",
         "x": 760,
         "y": 420,
-        "wires": []
-    },
-    {
-        "id": "31c8ed0d59a85e67",
-        "type": "ui-text",
-        "z": "8f708038682bad2f",
-        "group": "d87adb4827b6ce4c",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "Derniere Porte/fenetre ouverte",
-        "label": "Derniere Porte/fenetre ouverte",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "value": "payload",
-        "valueType": "msg",
-        "x": 1270,
-        "y": 360,
         "wires": []
     }
 ]
