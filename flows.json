@@ -689,7 +689,7 @@
         "group": "d87adb4827b6ce4c",
         "name": "Unlock et desarm (3 Sec)",
         "label": "Unlock et desarm (3 Sec)",
-        "order": 3,
+        "order": 4,
         "width": "3",
         "height": "1",
         "emulateClick": true,
@@ -744,7 +744,7 @@
         "group": "d87adb4827b6ce4c",
         "name": "Custom command",
         "label": "Write here...",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "topic": "topic",
@@ -787,7 +787,8 @@
         "y": 720,
         "wires": [
             [
-                "c53801e8bc959a48"
+                "c53801e8bc959a48",
+                "027c5b6a2c1646ee"
             ]
         ]
     },
@@ -796,7 +797,7 @@
         "type": "ui-text",
         "z": "8f708038682bad2f",
         "group": "d87adb4827b6ce4c",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
@@ -814,5 +815,32 @@
         "x": 1250,
         "y": 780,
         "wires": []
+    },
+    {
+        "id": "027c5b6a2c1646ee",
+        "type": "ui-table",
+        "z": "8f708038682bad2f",
+        "group": "d87adb4827b6ce4c",
+        "name": "",
+        "label": "",
+        "order": 1,
+        "width": "12",
+        "height": "6",
+        "maxrows": "8",
+        "passthru": false,
+        "autocols": true,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "none",
+        "columns": [],
+        "mobileBreakpoint": "",
+        "mobileBreakpointType": "none",
+        "action": "append",
+        "className": "",
+        "x": 1230,
+        "y": 880,
+        "wires": [
+            []
+        ]
     }
 ]
