@@ -789,7 +789,8 @@
         "y": 720,
         "wires": [
             [
-                "c53801e8bc959a48"
+                "c53801e8bc959a48",
+                "b324af0a6bf7d597"
             ]
         ]
     },
@@ -886,27 +887,34 @@
         "wires": []
     },
     {
-        "id": "1857aec2664fd376",
-        "type": "ui-text",
+        "id": "b324af0a6bf7d597",
+        "type": "ui-text-input",
         "z": "8f708038682bad2f",
         "group": "d87adb4827b6ce4c",
+        "name": "",
+        "label": "text",
         "order": 1,
         "width": 0,
         "height": 0,
-        "name": "",
-        "label": "text",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "<!-- HTML --> <div class=\"payload-table-container\">     <table class=\"payload-table\">         <thead>             <tr>                 <th>Key</th>                 <th>Value</th>             </tr>         </thead>         <tbody id=\"table-body\">             <!-- Table rows will be injected here -->         </tbody>     </table> </div>  <style> /* CSS Styling */ .payload-table-container {     margin: 10px;     overflow-x: auto; }  .payload-table {     border-collapse: collapse;     width: 100%;     font-family: Arial, sans-serif; }  .payload-table th, .payload-table td {     border: 1px solid #ddd;     padding: 8px; }  .payload-table th {     background-color: #4CAF50;     color: white;     text-align: left; }  .payload-table tr:nth-child(even){background-color: #f2f2f2;}  .payload-table tr:hover {background-color: #ddd;} </style>  <script> (function(scope) {     // Watch for incoming payload     scope.$watch('msg', function(msg) {         if (!msg || !msg.payload) return;          let tbody = document.getElementById('table-body');         tbody.innerHTML = ''; // Clear previous rows          // If payload is an object         if (typeof msg.payload === 'object' && !Array.isArray(msg.payload)) {             Object.keys(msg.payload).forEach(function(key) {                 let row = document.createElement('tr');                 let keyCell = document.createElement('td');                 keyCell.textContent = key;                 let valueCell = document.createElement('td');                 valueCell.textContent = msg.payload[key];                 row.appendChild(keyCell);                 row.appendChild(valueCell);                 tbody.appendChild(row);             });         }          // If payload is an array of objects         else if (Array.isArray(msg.payload)) {             msg.payload.forEach(function(item) {                 let row = document.createElement('tr');                 Object.keys(item).forEach(function(key) {                     let cell = document.createElement('td');                     cell.textContent = item[key];                     row.appendChild(cell);                 });                 tbody.appendChild(row);             });         }     }); })(scope); </script>",
-        "value": "payload",
-        "valueType": "msg",
-        "x": 130,
-        "y": 600,
-        "wires": []
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "textarea",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": false,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 1270,
+        "y": 720,
+        "wires": [
+            []
+        ]
     }
 ]
