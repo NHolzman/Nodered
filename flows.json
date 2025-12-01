@@ -790,7 +790,7 @@
         "wires": [
             [
                 "c53801e8bc959a48",
-                "8f23f11d5463eaf7"
+                "773bd26aa39b3fc0"
             ]
         ]
     },
@@ -898,7 +898,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<div>\n  <h3>System Logs</h3>\n  <table style=\"width:100%; border-collapse: collapse;\">\n    <thead>\n      <tr>\n        <th style=\"border: 1px solid #ccc; padding: 5px;\">Time</th>\n        <th style=\"border: 1px solid #ccc; padding: 5px;\">Message</th>\n      </tr>\n    </thead>\n    <tbody>\n      <!-- AngularJS repeat to render each log -->\n      <tr ng-repeat=\"log in msg.payload | orderBy:'-time'\">\n        <td style=\"border: 1px solid #ccc; padding: 5px;\">{{log.time}}</td>\n        <td style=\"border: 1px solid #ccc; padding: 5px;\"\n            ng-style=\"{'color': log.message.length > 50 ? 'red' : 'black'}\">\n            {{log.message}}\n        </td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n",
+        "format": "<div>\n  <h3>Payload log</h3>\n  <table style=\"width:100%; border-collapse: collapse; border: 1px solid #ccc;\">\n    <thead>\n      <tr>\n        <th style=\"border: 1px solid #ccc; padding: 4px;\">Time</th>\n        <th style=\"border: 1px solid #ccc; padding: 4px;\">Payload</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr ng-repeat=\"entry in msg.payload | orderBy:'-time'\">\n        <td style=\"border: 1px solid #ccc; padding: 4px;\">{{entry.time}}</td>\n        <td style=\"border: 1px solid #ccc; padding: 4px;\">{{entry.payload}}</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -908,6 +908,26 @@
         "y": 860,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "773bd26aa39b3fc0",
+        "type": "function",
+        "z": "8f708038682bad2f",
+        "name": "function 2",
+        "func": "// Get existing logs (or init)\nlet logs = flow.get('logs') || [];\n\n// Append new payload + timestamp\nlogs.push({\n    time: new Date().toLocaleString(),\n    payload: msg.payload\n});\n\n// Optional: limit number of entries\nif (logs.length > 50) {\n    logs.shift();\n}\n\nflow.set('logs', logs);\n\n// Send array-of-logs to dashboard\nmsg.payload = logs;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 880,
+        "wires": [
+            [
+                "8f23f11d5463eaf7"
+            ]
         ]
     }
 ]
