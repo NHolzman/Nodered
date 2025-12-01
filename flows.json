@@ -749,7 +749,7 @@
         "order": 6,
         "width": 0,
         "height": 0,
-        "topic": "topic",
+        "topic": "payload",
         "topicType": "msg",
         "mode": "text",
         "tooltip": "",
@@ -904,7 +904,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1220,
+        "x": 1240,
         "y": 860,
         "wires": [
             []
