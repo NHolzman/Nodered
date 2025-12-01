@@ -825,7 +825,7 @@
         "width": 0,
         "height": 0,
         "name": "Dernier mot de passe",
-        "label": "text",
+        "label": "Dernier mot de passe",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "style": false,
