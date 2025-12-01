@@ -394,7 +394,8 @@
         "wires": [
             [
                 "4985117025e46e25",
-                "9a6af8558bf055a8"
+                "9a6af8558bf055a8",
+                "5797498a73c3b406"
             ]
         ]
     },
@@ -689,7 +690,7 @@
         "group": "d87adb4827b6ce4c",
         "name": "Unlock et desarm (3 Sec)",
         "label": "Unlock et desarm (3 Sec)",
-        "order": 3,
+        "order": 4,
         "width": "3",
         "height": "1",
         "emulateClick": true,
@@ -744,7 +745,7 @@
         "group": "d87adb4827b6ce4c",
         "name": "Custom command",
         "label": "Write here...",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "topic": "topic",
@@ -796,7 +797,7 @@
         "type": "ui-text",
         "z": "8f708038682bad2f",
         "group": "d87adb4827b6ce4c",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
@@ -813,6 +814,30 @@
         "valueType": "msg",
         "x": 1250,
         "y": 780,
+        "wires": []
+    },
+    {
+        "id": "5797498a73c3b406",
+        "type": "ui-text",
+        "z": "8f708038682bad2f",
+        "group": "d87adb4827b6ce4c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Dernier mot de passe",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payloads",
+        "valueType": "msg",
+        "x": 600,
+        "y": 640,
         "wires": []
     }
 ]
