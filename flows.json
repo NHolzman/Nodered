@@ -699,7 +699,7 @@
         "className": "",
         "icon": "",
         "iconPosition": "left",
-        "payload": "",
+        "payload": "aa",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
