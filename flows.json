@@ -896,7 +896,7 @@
         "order": 1,
         "width": 0,
         "height": 0,
-        "maxrows": "57",
+        "maxrows": "0",
         "passthru": false,
         "autocols": false,
         "showSearch": true,
