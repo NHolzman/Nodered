@@ -689,7 +689,7 @@
         "group": "d87adb4827b6ce4c",
         "name": "Unlock et desarm (3 Sec)",
         "label": "Unlock et desarm (3 Sec)",
-        "order": 4,
+        "order": 3,
         "width": "3",
         "height": "1",
         "emulateClick": true,
@@ -744,7 +744,7 @@
         "group": "d87adb4827b6ce4c",
         "name": "Custom command",
         "label": "Write here...",
-        "order": 3,
+        "order": 2,
         "width": 0,
         "height": 0,
         "topic": "topic",
@@ -787,8 +787,7 @@
         "y": 720,
         "wires": [
             [
-                "c53801e8bc959a48",
-                "14d8729b42b1841a"
+                "c53801e8bc959a48"
             ]
         ]
     },
@@ -797,7 +796,7 @@
         "type": "ui-text",
         "z": "8f708038682bad2f",
         "group": "d87adb4827b6ce4c",
-        "order": 2,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "",
@@ -815,43 +814,5 @@
         "x": 1250,
         "y": 780,
         "wires": []
-    },
-    {
-        "id": "14d8729b42b1841a",
-        "type": "ui-form",
-        "z": "8f708038682bad2f",
-        "name": "",
-        "group": "d87adb4827b6ce4c",
-        "label": "",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "options": [
-            {
-                "label": "",
-                "key": "",
-                "type": "text",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "clear",
-        "resetOnSubmit": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "passthru": false,
-        "dropdownOptions": [],
-        "x": 1190,
-        "y": 860,
-        "wires": [
-            []
-        ]
     }
 ]
