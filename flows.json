@@ -846,7 +846,7 @@
         "type": "function",
         "z": "8f708038682bad2f",
         "name": "function 1",
-        "func": "switch(msg.payload) {\n    case \"WIN_1\":\n        msg.payload = \"Fenetre 1\";\n        return msg;\n    case \"WIN_2\":\n        msg.payload = \"Fenetre 2\";\n        return msg;\n    default:\n        return null; // drop all other messages\n}\n",
+        "func": "switch(msg.payload) {\n    case \"WIN_1\":\n        msg.payload = \"Fenetre 1\";\n        return msg;\n    case \"WIN_2\":\n        msg.payload = \"Fenetre 2\";\n        return msg;\n    case \"WIN_3\":\n        msg.payload = \"Fenetre 3\";\n        return msg;\n    default:\n        return null; // drop all other messages\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
